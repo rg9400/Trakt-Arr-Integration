@@ -31,7 +31,7 @@ def split_by_nested_count(lst, key_1, key_2, n):
         count = 0
         for e in d[key_1]:
             count += len(e[key_2])
-        if i < n and i + count > n:
+        if i + count > n:
             yield collected
             collected = []
             collected.append(d)
