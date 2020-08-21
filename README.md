@@ -3,11 +3,11 @@ Python scripts to push data from Radarr/Sonarr into your Trakt collection.
 
 All 3 scripts require you to have Radarr aphrodite and have set up the Trakt connection in Radarr.
 
-Force Resync will first delete ALL your movie or show data in your collections (depending on the script) before pushing the data from Sonarr/Radarr. The benefit is that this removes any possible entities in Trakt that are not in Sonarr, forcing them to be fully in sync. If False, it will update the relevant data for existing items while adding new items in Sonarr/Radarr but not Trakt.
+**Force Resync** will first delete ALL your movie or show data in your collections (depending on the script) before pushing the data from Sonarr/Radarr. The benefit is that this removes any possible entities in Trakt that are not in Sonarr, forcing them to be fully in sync. If False, it will update the relevant data for existing items while adding new items in Sonarr/Radarr but not Trakt.
 
-Use Collected Date will utilize the download date from Sonarr/Radarr when syncing the data to your Trakt collection. If True, it will replace existing items' dates with those in the Arrs. If False, it will keep any existing item dates, and if a new item is being added, then it will use the airdate/release date  for that item instead.
+**Use Collected Date** will utilize the download date from Sonarr/Radarr when syncing the data to your Trakt collection. If True, it will replace existing items' dates with those in the Arrs. If False, it will keep any existing item dates, and if a new item is being added, then it will use the airdate/release date  for that item instead.
 
-Chunk Size was recommended by the Trakt developer. It slows down the runtime for the syncs and increases API calls, but higher values can result in Trakt being unable to process your request. If you do a forced resync, then Trakt will handle larger chunk sizes and be generally faster as there is no validation or data matching happening.
+**Chunk Size** was recommended by the Trakt developer. It slows down the runtime for the syncs and increases API calls, but higher values can result in Trakt being unable to process your request. If you do a forced resync, then Trakt will handle larger chunk sizes and be generally faster as there is no validation or data matching happening.
 
 ## Desriptions of scripts
 
