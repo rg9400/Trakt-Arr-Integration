@@ -8,6 +8,7 @@ RADARR_LOCAL_URL = 'http://localhost:7878/radarr/' # Make sure you include the t
 TRAKT_FORCE_RESYNC = False #Set to True to delete all movies from Trakt's collection before pushing Radarr's list
 CHUNK_SIZE = 1000 #number of movies to send to Trakt in a single API paylod
 USE_RADARR_COLLECTED_DATE = True #If False, Trakt will use its existing collected date if available (won't work on resync) or the item's release date
+
 ########################################################################################
 #We rely on Radarr for Trakt oAuth. This requires you to have a Trakt connection already setup in Radarr and authenticated
 #The below Trakt Client ID should not need to be changed, but you can verify if it is still accurate by checking the one found at 
