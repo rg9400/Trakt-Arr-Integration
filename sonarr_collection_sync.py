@@ -15,7 +15,7 @@ RADARR_LOCAL_URL = 'http://localhost:7878/radarr/' # Make sure you include the t
 
 ########################################################################################
 #The below Trakt Client ID should not need to be changed, but you can verify if it is still accurate by checking the one found at 
-#https://github.com/Radarr/Radarr/blob/c05209c5159139f55ad2c7caeb7c0a66926aa127/src/NzbDrone.Core/Notifications/Trakt/TraktProxy.cs#L27
+#https://github.com/Radarr/Radarr/blob/aphrodite/src/NzbDrone.Core/Notifications/Trakt/TraktProxy.cs#L27
 TRAKT_CLIENT_ID = "64508a8bf370cee550dde4806469922fd7cd70afb2d5690e3ee7f75ae784b70e"
 #########################################################################################
 
