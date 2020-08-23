@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# Author:       /u/RG9400
+# Requires:     requests
 import requests
 import json
 import time

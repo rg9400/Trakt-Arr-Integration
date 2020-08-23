@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# Author:       /u/RG9400
+# Requires:     requests
 from datetime import datetime
 from logging.handlers import RotatingFileHandler
 from logging import DEBUG, INFO, getLogger, Formatter
@@ -25,8 +29,7 @@ TRAKT_CLIENT_ID = "64508a8bf370cee550dde4806469922fd7cd70afb2d5690e3ee7f75ae784b
 # Set up the rotating log files
 size = 10*1024*1024  # 5MB
 max_files = 5  # Keep up to 7 logs
-os.makedirs(os.path.join(os.path.dirname(sys.argv[0]), 'logs'), exist_ok=True)
-log_filename = os.path.join(os.path.dirname(sys.argv[0]), 'logs/sonarr_notification.log')
+log_filename = os.path.join(os.path.dirname(sys.argv[0]), 'sonarr_trakt_connection.log')
 file_logger = RotatingFileHandler(log_filename, maxBytes=size, backupCount=max_files)
 file_logger.setLevel(INFO)
 logger_formatter = Formatter('[%(asctime)s] %(name)s - %(levelname)s - %(message)s')
