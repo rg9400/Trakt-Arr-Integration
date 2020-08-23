@@ -3,6 +3,8 @@ Python scripts to push data from Radarr/Sonarr into your Trakt collection.
 
 All 3 scripts require you to have Radarr aphrodite and have set up the Trakt connection in Radarr.
 
+Requires Python3 (developed with Python 3.8). You need the requests model, i.e. `python -m pip install requests` replacing python with whatever your python3 binary is.
+
 **Force Resync** will first delete ALL your movie or show data in your collections (depending on the script) before pushing the data from Sonarr/Radarr. The benefit is that this removes any possible entities in Trakt that are not in Sonarr, forcing them to be fully in sync. If False, it will update the relevant data for existing items while adding new items in Sonarr/Radarr but not Trakt.
 
 **Use Collected Date** will utilize the download date from Sonarr/Radarr when syncing the data to your Trakt collection. If True, it will replace existing items' dates with those in the Arrs. If False, it will keep any existing item dates, and if a new item is being added, then it will use the airdate/release date  for that item instead.
