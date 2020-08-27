@@ -210,5 +210,6 @@ for series_sublist in chunked_series_list:
     payload = json.dumps({"shows": series_sublist})
     trakt_response = requests.post(trakt_api_url, headers=trakt_headers, data=payload)
     print("HTTP Response Code: {}".format(trakt_response.status_code))
-    print(trakt_response.json())
+    message = trakt_response.json()
+    print("Response: {}".format(json.dumps(message, sort_keys=True, indent=4, separators=(',', ': '))))
     time.sleep(1)

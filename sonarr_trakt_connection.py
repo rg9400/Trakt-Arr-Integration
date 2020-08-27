@@ -174,8 +174,10 @@ media_object = {
 }
 show_list = []
 show_list.append(media_object)
-payload = json.dumps({"shows": show_list})
-log.info(payload)
+message = {"shows": show_list}
+payload = json.dumps(message)
+log.info("Payload: {}".format(json.dumps(message, sort_keys=True, indent=4, separators=(',', ': '))))
 trakt_response = requests.post(trakt_api_url, headers=trakt_headers, data=payload)
 log.info("HTTP Response Code: {}".format(trakt_response.status_code))
-log.info(trakt_response.json())
+message = trakt_response.json()
+log.info("Response: {}".format(json.dumps(message, sort_keys=True, indent=4, separators=(',', ': '))))
