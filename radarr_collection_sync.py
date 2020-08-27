@@ -48,8 +48,9 @@ if TRAKT_FORCE_RESYNC:
         deletion_payload = json.dumps({"movies":deletion_sublist})
         trakt_delete_response = requests.post('{}/remove'.format(trakt_api_url), headers=trakt_headers, data=deletion_payload)
         print("HTTP Response Code: {}".format(trakt_delete_response.status_code))
-        print(trakt_delete_response.json())
-        time.sleep(5)
+        message = trakt_delete_response.json()
+        print("Response: {}".format(json.dumps(message, sort_keys=True, indent=4, separators=(',', ': '))))
+        time.sleep(1)
 
 radarr_api_url = '{}api/v3/movie?apikey={}'.format(RADARR_LOCAL_URL, RADARR_API_KEY)
 radarr_movies = requests.get(radarr_api_url).json()

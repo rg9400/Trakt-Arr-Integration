@@ -1,7 +1,7 @@
 # Trakt-Arr-Integration
 Python scripts to push data from Radarr/Sonarr into your Trakt collection.
 
-All 3 scripts require you to have Radarr aphrodite and have set up the Trakt connection in Radarr.
+All 5 scripts require you to have Radarr aphrodite and have set up the Trakt connection in Radarr.
 
 Requires Python3 (developed with Python 3.8). You need the requests model, i.e. `python -m pip install requests` replacing python with whatever your python3 binary is.
 
@@ -18,6 +18,10 @@ Requires Python3 (developed with Python 3.8). You need the requests model, i.e. 
 2. sonarr_collection_sync will use Sonarr data to upload downloaded episode info to Trakt
 
 3. sonarr_trakt_connection is a temporary script that can be used as a connection in Sonarr, similar to the one in Radarr, to push new episode downloads into your Trakt collection to keep it up to date. A native connection PR is open at https://github.com/Sonarr/Sonarr/pull/3917 and should hopefully be added in the near future to make this script obsolete.
+
+4. radarr_delete_list is a script that can be used as a connection in Radarr to delete a movie from either your watchlist or a custom list you made. The usecase is to keep a list of movies as "Wanted" in Trakt that is synced to the one in Radarr. If you use the Collection sync/connection, then you can easily filter movies you want, have, or are not in Radarr when navigating Trakt.
+
+5. radarr_missing_list_sync will push all movies marked as missing in Radarr to a list or your watchlist. This can help get your list up to speed for script #4 to then keep in sync going forward.
 
 ## Limitations
 
