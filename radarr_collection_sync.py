@@ -95,7 +95,7 @@ for movie in downloaded_movies:
         "AC3":"dolby_digital",
         "EAC3":"dolby_digital_plus",
         "TrueHD":"dolby_truehd",
-        "EAC3 Atmos":"dolby_atmos",
+        "EAC3 Atmos":"dolby_digital_plus_atmos",
         "TrueHD Atmos":"dolby_atmos",
         "DTS":"dts",
         "DTS-ES":"dts",
@@ -103,13 +103,13 @@ for movie in downloaded_movies:
         "DTS-HD HRA":"dts_hr",
         "DTS-X":"dts_x",
         "MP3":"mp3",
-        "MP2":"mp3",
+        "MP2":"mp2",
         "Vorbis":"ogg",
         "WMA":"wma",
         "AAC":"aac",
         "PCM":"lpcm",
         "FLAC":"flac",
-        "Opus":"ogg"
+        "Opus":"ogg_opus"
         }
     audio = audio_mapping.get(audio_codec, None)
 
