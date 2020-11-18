@@ -116,18 +116,6 @@ for movie in downloaded_movies:
     audio_channel_count = movie['movieFile']['mediaInfo']['audioChannels']
     channel_mapping = str(audio_channel_count)
     audio_channels = channel_mapping
-    #Below is when DTS-X is used and MediaInfo does not give object counts
-    if audio_channel_count == 8.0:
-        audio_channels = "7.1"
-    #Below incorrect count can sometimes be 6.1 for DTS-HR tracks, but the vast majority of time, it is for 7.1 tracks
-    #It happens when channels_original and channels differ. Out of 17 such cases, only 3 were actually 6.1, rest were 7.1
-    elif audio_channel_count == 6.0 and audio == "dts_ma":
-        audio_channels = "7.1"
-    elif audio_channel_count == 6.0 and audio != "dts_ma":
-        audio_channels = "6.1"
-    #Not sure why this happens, but I noticed a few older 1.0 PCM tracks coming as 0.0 channel count in Radarr
-    elif audio_channel_count == 0.0:
-        audio_channels = "1.0"
 
     media_object = {
         "title": title,
